@@ -27,14 +27,15 @@ Terminalia is a free SSH client for macOS. It uses the OpenSSH that already ship
 - **No account.** Nothing to sign up for.
 - **No telemetry.** The app sends no analytics.
 - **Works offline.** The editor is bundled with the app; it only talks to your servers over SSH.
-- **Your config stays yours.** Profiles come from `~/.ssh/config`; private key passphrases live in the macOS Keychain.
+- **Your config stays yours.** Profiles come from `~/.ssh/config`; key passphrases and saved server passwords live in the macOS Keychain.
 
 ## Features
 
 | | |
 |---|---|
-| **Connections** | Import hosts from `~/.ssh/config` with preview, including LocalForward, RemoteForward and ProxyJump. Master session with automatic reconnect and a status panel (socket, PID, latency). |
-| **Tunnels** | `-L` and `-R` forwards you can toggle live, auto-start on connect, and detection of busy local ports. |
+| **Connections** | Import hosts from `~/.ssh/config` with preview, including LocalForward, RemoteForward, DynamicForward, ProxyJump and CertificateFile. Groups and PROD / STG / DEV badges. Master session with automatic reconnect and a status panel (socket, PID, latency). |
+| **Tunnels** | `-L`, `-R` and SOCKS (`-D`) forwards you can toggle live, auto-start on connect, and detection of busy local ports. |
+| **Snippets** | Save named commands, paste them into the terminal or run them on a connection, also from the ⌘K palette. |
 | **SFTP and editor** | File browser with favorites, permissions and drag and drop to and from Finder. Tabbed editor with atomic saves and a diff view. |
 | **Processes** | PM2 and Docker Compose in one panel: start, stop, restart, grouped by project. Works with pm2 installed through nvm or Homebrew. |
 | **Logs and terminal** | Live PM2, Docker and file logs with search and filters, plus a built-in tabbed terminal and a ⌘K command palette. |
@@ -52,20 +53,20 @@ Terminalia is a free SSH client for macOS. It uses the OpenSSH that already ship
 
 - macOS 14 Sonoma or later
 - Apple Silicon or Intel (universal binary)
-- SSH key authentication (ed25519, ECDSA or RSA). Password login is not supported yet; copy your key with `ssh-copy-id`.
+- Sign in with a private key (ed25519, ECDSA or RSA), username and password, or an OpenSSH user certificate.
 - Spanish or English interface.
 
 ## Install
 
-1. Download `Terminalia-1.0.2.dmg` from [Releases](https://github.com/agustinalonsocantoli/terminalia/releases/latest) or from [terminalia.dev](https://terminalia.dev/en/download).
+1. Download `Terminalia-1.1.0.dmg` from [Releases](https://github.com/agustinalonsocantoli/terminalia/releases/latest) or from [terminalia.dev](https://terminalia.dev/en/download).
 2. Open the DMG and drag Terminalia to Applications.
 3. The first time, macOS will block it because the app is not notarized by Apple yet. Go to **System Settings › Privacy & Security** and click **Open Anyway**. You only need to do this once.
 
 Verify the download (optional):
 
 ```sh
-shasum -a 256 ~/Downloads/Terminalia-1.0.2.dmg
-# 59f77fe68f0423931cfda39fd53bb013521190de72ff846511b5ee0c4c7369a1
+shasum -a 256 ~/Downloads/Terminalia-1.1.0.dmg
+# 06249d1213760d4539d76a28985acf4d08d03d9351735e8d4382df27b75d84bb
 ```
 
 ## Guides

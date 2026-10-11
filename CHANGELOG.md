@@ -2,6 +2,30 @@
 
 Full release notes: [terminalia.dev/en/changelog](https://terminalia.dev/en/changelog)
 
+## 1.1.0 · 2026-10-11
+
+Authentication, groups, snippets and SOCKS tunnels.
+
+### Connections
+- Three ways to sign in: private key, username and password, or an OpenSSH user certificate.
+- Password login: the password can be saved in the macOS Keychain, separate from key passphrases; if you don't save it, the app asks when connecting. It is never written to disk or passed in process arguments. Automatic reconnects never ask for it.
+- Certificate login: pick the `-cert.pub` file and its private key is detected; the app shows validity and principals and warns when it has expired. Importing `~/.ssh/config` recognizes `CertificateFile`.
+- A `.pem` file is a private key: it goes under "Private key".
+- Connection groups by project or client in the sidebar, and a PROD / STG / DEV environment badge in the list, the detail view and the status bar.
+
+### Snippets
+- New Snippets section (⌘7) to save named commands.
+- "Paste in terminal" writes the command without running it; "Run on <connection>" runs it.
+- Snippets show up in the ⌘K palette (↵ runs, ⇥ pastes), and any history entry can be saved as a snippet (⌘S).
+- Section shortcuts: Transfers moves to ⌘8 and Settings to ⌘9.
+
+### Tunnels
+- SOCKS tunnels (`-D`) next to `-L` and `-R`: first free port from 1080, "Copy address", and a warning when listening on 0.0.0.0.
+- `DynamicForward` is imported from `~/.ssh/config`.
+
+### Terminal
+- A terminal tab waits while you type the server password instead of timing out.
+
 ## 1.0.2 · 2026-10-10
 
 Languages.
