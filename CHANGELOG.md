@@ -2,6 +2,25 @@
 
 Full release notes: [terminalia.dev/en/changelog](https://terminalia.dev/en/changelog)
 
+## 1.2.0 · 2026-10-12
+
+Terminal and files.
+
+### Terminal
+- Split panes: split right (⌘D) or down (⌥⇧⌘D), move between panes with ⌥⌘ and the arrows, resize by dragging. Each pane shows its connection and environment badge; ⌘W closes the focused pane.
+- Panes in one tab can use different connections; snippets always go to a pane of the chosen connection.
+- Search in the terminal (⌘F): match counter, case-sensitive and regex options, next and previous.
+- Workspaces: save your tabs, panes and connections and restore them in one click from the sidebar or the ⌘K palette. Restoring opens the connections and the layout; it never runs commands.
+
+### Files
+- Each file opens in its own editor window, titled "file — server" with a stripe in the environment colour. Opening a file that is already open brings its window to the front.
+- Unsaved changes are protected per window: closing, switching servers or disconnecting asks Save, Discard or Cancel. An unexpected connection loss never discards changes.
+- Dual-pane browser: "This Mac" on the left and the server on the right. Copy with → / ←, "Copy to other pane" or drag and drop. Local files open in the same editor; deleting a local file moves it to the Trash.
+
+### App
+- Sidebar (⌘0), process column (⌥⌘0) and bottom panel (⌘J) can be hidden and shown again with always-visible buttons; when the bottom panel is hidden its tabs stay at the bottom. The app remembers which ones were open.
+- Settings › Keyboard shortcuts: every menu shortcut can be changed, with search, conflict warnings, macOS reserved shortcut warnings and reset.
+
 ## 1.1.0 · 2026-10-11
 
 Authentication, groups, snippets and SOCKS tunnels.

@@ -17,7 +17,7 @@
 </p>
 
 <p align="center">
-  <img src=".github/assets/explorer.webp" alt="Terminalia showing the SFTP file browser connected to a server, with the process panel on the right">
+  <img src=".github/assets/explorer.png" alt="Terminalia dual-pane browser with this Mac on the left and a server on the right">
 </p>
 
 ## What it is
@@ -36,17 +36,23 @@ Terminalia is a free SSH client for macOS. It uses the OpenSSH that already ship
 | **Connections** | Import hosts from `~/.ssh/config` with preview, including LocalForward, RemoteForward, DynamicForward, ProxyJump and CertificateFile. Groups and PROD / STG / DEV badges. Master session with automatic reconnect and a status panel (socket, PID, latency). |
 | **Tunnels** | `-L`, `-R` and SOCKS (`-D`) forwards you can toggle live, auto-start on connect, and detection of busy local ports. |
 | **Snippets** | Save named commands, paste them into the terminal or run them on a connection, also from the ⌘K palette. |
-| **SFTP and editor** | File browser with favorites, permissions and drag and drop to and from Finder. Tabbed editor with atomic saves and a diff view. |
+| **SFTP and editor** | Dual-pane browser with your Mac on one side and the server on the other: copy both ways with → / ← or drag and drop. Each file opens in its own editor window, with atomic saves and a diff view. |
 | **Processes** | PM2 and Docker Compose in one panel: start, stop, restart, grouped by project. Works with pm2 installed through nvm or Homebrew. |
-| **Logs and terminal** | Live PM2, Docker and file logs with search and filters, plus a built-in tabbed terminal and a ⌘K command palette. |
+| **Logs and terminal** | Live PM2, Docker and file logs with search and filters. Built-in terminal with split panes, search (⌘F) and workspaces you can restore in one click, plus a ⌘K command palette. |
+| **Your way** | Hide or show the sidebar, process column and bottom panel, and change every keyboard shortcut in Settings. |
 
 <p align="center">
-  <img src=".github/assets/tunnels.webp" width="49%" alt="Tunnels panel with local and remote forwards">
-  <img src=".github/assets/processes.webp" width="49%" alt="Processes panel with PM2 and Docker Compose services">
+  <img src=".github/assets/tunnels.png" width="49%" alt="Tunnels panel with local and remote forwards">
+  <img src=".github/assets/processes.png" width="49%" alt="Processes panel with PM2 and Docker Compose services">
 </p>
 <p align="center">
-  <img src=".github/assets/editor.webp" width="49%" alt="Remote file editor with tabs">
-  <img src=".github/assets/logs.webp" width="49%" alt="Live logs window with search and level filter">
+  <img src=".github/assets/editor.png" width="49%" alt="Remote file open in its own editor window">
+  <img src=".github/assets/logs.png" width="49%" alt="Live logs window with search and level filter">
+</p>
+
+<p align="center">
+  <img src=".github/assets/terminal.png" width="49%" alt="Terminal split into three panes">
+  <img src=".github/assets/connections.png" width="49%" alt="Connections with workspaces, groups and environment badges">
 </p>
 
 ## Requirements
@@ -58,15 +64,15 @@ Terminalia is a free SSH client for macOS. It uses the OpenSSH that already ship
 
 ## Install
 
-1. Download `Terminalia-1.1.0.dmg` from [Releases](https://github.com/agustinalonsocantoli/terminalia/releases/latest) or from [terminalia.dev](https://terminalia.dev/en/download).
+1. Download `Terminalia-1.2.0.dmg` from [Releases](https://github.com/agustinalonsocantoli/terminalia/releases/latest) or from [terminalia.dev](https://terminalia.dev/en/download).
 2. Open the DMG and drag Terminalia to Applications.
 3. The first time, macOS will block it because the app is not notarized by Apple yet. Go to **System Settings › Privacy & Security** and click **Open Anyway**. You only need to do this once.
 
 Verify the download (optional):
 
 ```sh
-shasum -a 256 ~/Downloads/Terminalia-1.1.0.dmg
-# 06249d1213760d4539d76a28985acf4d08d03d9351735e8d4382df27b75d84bb
+shasum -a 256 ~/Downloads/Terminalia-1.2.0.dmg
+# 4b4802b8da6ed8483b3c2733acf082341efe53ae73088d1d5565ca9c77c4eeee
 ```
 
 ## Guides
