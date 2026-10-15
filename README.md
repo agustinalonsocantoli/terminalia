@@ -33,7 +33,7 @@ Terminalia is a free SSH client for macOS. It uses the OpenSSH that already ship
 
 | | |
 |---|---|
-| **Connections** | Import hosts from `~/.ssh/config` with preview, including LocalForward, RemoteForward, DynamicForward, ProxyJump and CertificateFile. Groups and PROD / STG / DEV badges. Master session with automatic reconnect and a status panel (socket, PID, latency). |
+| **Connections** | Import hosts from `~/.ssh/config` with preview, including LocalForward, RemoteForward, DynamicForward, ProxyJump and CertificateFile. Groups and PROD / STG / DEV badges. Two-factor authentication (verification codes, Duo) with one code per connection. Master session with automatic reconnect and a status panel (socket, PID, latency). |
 | **Tunnels** | `-L`, `-R` and SOCKS (`-D`) forwards you can toggle live, auto-start on connect, and detection of busy local ports. |
 | **Snippets** | Save named commands, paste them into the terminal or run them on a connection, also from the ⌘K palette. |
 | **SFTP and editor** | Dual-pane browser with your Mac on one side and the server on the other: copy both ways with → / ← or drag and drop. Each file opens in its own editor window, with atomic saves and a diff view. |
@@ -59,20 +59,20 @@ Terminalia is a free SSH client for macOS. It uses the OpenSSH that already ship
 
 - macOS 14 Sonoma or later
 - Apple Silicon or Intel (universal binary)
-- Sign in with a private key (ed25519, ECDSA or RSA), username and password, or an OpenSSH user certificate.
+- Sign in with a private key (ed25519, ECDSA or RSA), username and password, or an OpenSSH user certificate, with or without two-factor authentication (MFA).
 - Spanish or English interface.
 
 ## Install
 
-1. Download `Terminalia-1.2.0.dmg` from [Releases](https://github.com/agustinalonsocantoli/terminalia/releases/latest) or from [terminalia.dev](https://terminalia.dev/en/download).
+1. Download `Terminalia-1.2.1.dmg` from [Releases](https://github.com/agustinalonsocantoli/terminalia/releases/latest) or from [terminalia.dev](https://terminalia.dev/en/download).
 2. Open the DMG and drag Terminalia to Applications.
 3. The first time, macOS will block it because the app is not notarized by Apple yet. Go to **System Settings › Privacy & Security** and click **Open Anyway**. You only need to do this once.
 
 Verify the download (optional):
 
 ```sh
-shasum -a 256 ~/Downloads/Terminalia-1.2.0.dmg
-# 4b4802b8da6ed8483b3c2733acf082341efe53ae73088d1d5565ca9c77c4eeee
+shasum -a 256 ~/Downloads/Terminalia-1.2.1.dmg
+# e25392edef11137fb72d10f474439be34012c70b711570c946fb535fc837fa1c
 ```
 
 ## Guides

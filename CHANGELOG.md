@@ -2,6 +2,18 @@
 
 Full release notes: [terminalia.dev/en/changelog](https://terminalia.dev/en/changelog)
 
+## 1.2.1 · 2026-10-15
+
+Interactive authentication (MFA).
+
+### Connections
+- If the server asks for something else when you connect (a verification code from Google Authenticator, 1Password or similar, Duo, a mandatory password change, or the bastion's password in a ProxyJump), Terminalia shows it in a "The server asks…" dialog with the server's exact text. Your answer is never saved to the Keychain or written to the log.
+- One code per connection: the terminal, file browser, tunnels, processes and logs reuse the same master connection.
+- Works with key + code, password + code and certificate + code.
+- Automatic reconnects never open a dialog by surprise: the connection waits in "Needs your attention" with a Reconnect button.
+- Clear messages when the code is rejected, when you cancel, or after 2 minutes without an answer.
+- Note: if a server offers a normal password and also a TOTP code through another method, password mode may need the SSH option `PreferredAuthentications=keyboard-interactive` in the profile.
+
 ## 1.2.0 · 2026-10-12
 
 Terminal and files.
