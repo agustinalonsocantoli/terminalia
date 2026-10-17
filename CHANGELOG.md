@@ -2,6 +2,20 @@
 
 Full release notes: [terminalia.dev/en/changelog](https://terminalia.dev/en/changelog)
 
+## 1.3.0 · 2026-10-17
+
+Distribution: in-app updates and Homebrew.
+
+### Updates
+- Terminalia now updates itself with Sparkle: it checks at launch and every 24 hours, and you can check by hand from Terminalia › Check for Updates…. When there is a new version it shows the release notes, downloads it, installs it and relaunches.
+- Updates are signed (EdDSA) and the signature is verified before installing.
+- Settings › General › "Automatically check for updates" turns off the automatic check; the menu item keeps working.
+- No telemetry: the check only downloads `https://terminalia.dev/appcast.xml` and sends no system profile.
+- Note: if you have 1.2.1 or earlier, download this version by hand one last time, since those versions don't include the updater. From 1.3.0 on, new versions arrive on their own.
+
+### Install
+- Homebrew: `brew tap agustinalonsocantoli/tap && brew trust --cask agustinalonsocantoli/tap/terminalia && brew install --cask agustinalonsocantoli/tap/terminalia`.
+
 ## 1.2.1 · 2026-10-15
 
 Interactive authentication (MFA).
