@@ -2,6 +2,26 @@
 
 Full release notes: [terminalia.dev/en/changelog](https://terminalia.dev/en/changelog)
 
+## 1.4.0 · 2026-10-18
+
+Menu bar icon and terminal themes.
+
+### Menu bar
+- Terminalia icon in the menu bar that shows the overall state: everything connected, something reconnecting, or something down.
+- Click it to see your connections (connect or disconnect), toggle active tunnels and check the PM2 and Docker summary of each server, without opening the window. Right click: Open Terminalia, Settings and Quit.
+- Works on every display and over full-screen apps.
+- Optional global shortcut to open it from any app: Settings › Keyboard Shortcuts › Navigation.
+- Settings › General: "Show icon in the menu bar" and "Keep in the menu bar when the window closes" (on by default: closing the last window doesn't quit Terminalia).
+
+### Terminal
+- 13 built-in themes: Terminalia, Dracula, One Dark, Nord, Gruvbox Dark, Solarized Dark, Catppuccin Mocha, Tokyo Night, Monokai, Solarized Light, Gruvbox Light, Catppuccin Latte and GitHub Light. Changes apply live to every open pane.
+- Follow the system appearance: one theme for light mode and another for dark mode.
+- Import themes in Ghostty format (`key = value`) or Terminalia JSON; they are kept in `~/Library/Application Support/Terminalia/themes/`.
+- Font: any installed monospaced family (JetBrains Mono is still included), size and line spacing.
+
+### Settings
+- Number fields apply the value as you type: switching section no longer loses the change.
+
 ## 1.3.0 · 2026-10-17
 
 Distribution: in-app updates and Homebrew.

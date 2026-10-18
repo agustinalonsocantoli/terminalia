@@ -64,14 +64,14 @@ Terminalia is a free SSH client for macOS. It uses the OpenSSH that already ship
 
 ## Install
 
-1. Download `Terminalia-1.3.0.dmg` from [Releases](https://github.com/agustinalonsocantoli/terminalia/releases/latest) or from [terminalia.dev](https://terminalia.dev/en/download).
+1. Download `Terminalia-1.4.0.dmg` from [Releases](https://github.com/agustinalonsocantoli/terminalia/releases/latest) or from [terminalia.dev](https://terminalia.dev/en/download).
 2. Open the DMG and drag Terminalia to Applications.
 3. The first time, macOS will block it because the app is not notarized by Apple yet. Go to **System Settings › Privacy & Security** and click **Open Anyway**. You only need to do this once.
 
 Verify the download (optional):
 
 ```sh
-shasum -a 256 ~/Downloads/Terminalia-1.3.0.dmg
+shasum -a 256 ~/Downloads/Terminalia-1.4.0.dmg
 # 2f7f60cbf901dcb2440f834e650b861affc6e894ed8f7bce6b4bcddd4456a168
 ```
 
