@@ -2,6 +2,32 @@
 
 Full release notes: [terminalia.dev/en/changelog](https://terminalia.dev/en/changelog)
 
+## 1.5.1 · 2026-10-31
+
+Global ⌘K: search and act on connections, snippets, workspaces, processes, tunnels, files and commands.
+
+### ⌘K
+- The palette searches connections, snippets, workspaces, processes, tunnels, files and command history at once, with fuzzy matching (`wbp` finds "web-prod") and recently used items first. It opens even when the active connection is not connected.
+- Prefixes narrow the search: `@` connection, `#` snippet, `:` process, `/` file, `>` command. Without a prefix, ↵ still runs what you typed as a command.
+- Per-result actions: ↵ runs the main action and ⌘↵ shows them all. Connection: connect, open terminal or file browser. Process: view logs, restart, stop (with confirmation) or start. Tunnel: activate or deactivate. File: open in the editor or show in the file browser. Folder: open in the file browser or open a terminal there.
+
+### Processes
+- The process list loads in the background as soon as you connect, without opening the Processes section.
+
+### Editor
+- While a file downloads for the editor, a notice shows its name and path.
+
+## 1.5.0 · 2026-10-31
+
+Shell inside containers, Podman, systemd services and Compose project logs.
+
+### Processes
+- **Shell in the container:** from any running Docker or Podman container, "Open shell" opens a terminal tab inside the container (bash if available, else sh) over the same SSH connection.
+- **Podman:** detected alongside Docker. List, stats, logs, start/stop/restart, pause, pull, recreate and remove, including remote mode (`CONTAINER_HOST`).
+- **systemd services:** new tab with `.service` units (state, description, enabled/disabled, PID, memory, CPU and restarts). Start, stop, restart, enable and disable without sudo: if permissions are missing, the error is shown as is with a hint. System or User scope (`systemctl --user`) and a "Show inactive" option (`failed` units are always shown). Logs via `journalctl -u … -f`.
+- **Compose project logs:** from the project header, "Project logs" opens the logs of all its services together, with chips to filter by service on top of the level filter.
+- Units you stop stay visible; global actions include `docker compose ls`, `podman system df` and `systemctl --failed`.
+
 ## 1.4.0 · 2026-10-18
 
 Menu bar icon and terminal themes.
