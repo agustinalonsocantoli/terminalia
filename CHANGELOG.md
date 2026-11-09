@@ -2,6 +2,21 @@
 
 Full release notes: [terminalia.dev/en/changelog](https://terminalia.dev/en/changelog)
 
+## 1.6.0 · 2026-11-09
+
+Local terminal, external editors and folder sync with rsync.
+
+### Terminal
+- **Local terminal:** a tab with your Mac's shell (File › New Local Terminal, ⌥⌘T, or "Open terminal here" in the "This Mac" pane). It inherits themes, fonts, ⌘F search and snippets, and can share a split tab with server panes.
+
+### Files
+- **Open in your editor:** "Open with…" in the file browser lists VS Code, Cursor, Zed and Sublime (plus "Other editor…"). The remote file opens in your editor and every time you save it is uploaded with Terminalia's safe save (keeps permissions and owner), shown in Transfers. If someone changed it on the server meanwhile, you're warned and can compare before uploading. Local copies are deleted on disconnect.
+- **Default editor:** Settings › Editor › "Double-click on a file" lets you open files in an external editor instead of the built-in one.
+- **Sync folders with rsync:** "Sync with…" on a Mac or server folder. It first shows the changes (new, modified, deleted and total size) and then syncs in the transfer queue with progress and cancel. Deleting at the destination is off by default and warns you. `.git`, `node_modules` and `.DS_Store` are excluded by default, and syncs can be saved by name. Without rsync on the server, it copies over SFTP.
+
+### Processes
+- If the server has no PM2, the section opens on the first available manager (Docker, Podman or systemd).
+
 ## 1.5.1 · 2026-10-31
 
 Global ⌘K: search and act on connections, snippets, workspaces, processes, tunnels, files and commands.
