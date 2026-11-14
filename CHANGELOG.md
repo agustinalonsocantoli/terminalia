@@ -2,6 +2,16 @@
 
 Full release notes: [terminalia.dev/en/changelog](https://terminalia.dev/en/changelog)
 
+## 1.7.0 · 2026-11-14
+
+Cron with a UI: jobs in plain language, a visual editor and changes reviewed before applying.
+
+### Processes
+- **Cron tab:** your user's crontab with every job in plain language ("Every day at 03:00", "Every 15 minutes, Monday through Friday") and its next run in server time.
+- **Job editor:** common shortcuts, the five fields with typical values, weekday buttons, a hand-editable expression, the command and the next five runs. Jobs can be enabled and disabled (commented out), duplicated and deleted.
+- **Safe changes:** changes are collected and reviewed in a diff before applying. Applying saves a backup of the previous crontab (`~/.terminalia-crontab.bak-<date>`), and removing jobs requires typed confirmation. If the crontab changed on the server meanwhile, it isn't overwritten.
+- **System cron** (`/etc/crontab`, `/etc/cron.d`) read-only and a **Cron logs** button (cron/crond journal or filtered syslog).
+
 ## 1.6.0 · 2026-11-09
 
 Local terminal, external editors and folder sync with rsync.
