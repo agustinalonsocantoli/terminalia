@@ -38,6 +38,7 @@ Terminalia is a free SSH client for macOS. It uses the OpenSSH that already ship
 | **Snippets** | Save named commands, paste them into the terminal or run them on a connection, also from the ⌘K palette. |
 | **SFTP and editor** | Dual-pane browser with your Mac on one side and the server on the other: copy both ways with → / ← or drag and drop. Each file opens in its own editor window, with atomic saves and a diff view. |
 | **Processes** | PM2 and Docker Compose in one panel: start, stop, restart, grouped by project. Works with pm2 installed through nvm or Homebrew. |
+| **Monitor (Premium)** | CPU, memory, load, network and disks of Linux and macOS servers in real time, with 7-day history and threshold alerts in the menu bar. License free on request for now at [terminalia.dev/premium](https://terminalia.dev/en/premium). |
 | **Logs and terminal** | Live PM2, Docker and file logs with search and filters. Built-in terminal with split panes, search (⌘F) and workspaces you can restore in one click, plus a ⌘K command palette. |
 | **Your way** | Hide or show the sidebar, process column and bottom panel, and change every keyboard shortcut in Settings. |
 
@@ -64,14 +65,14 @@ Terminalia is a free SSH client for macOS. It uses the OpenSSH that already ship
 
 ## Install
 
-1. Download `Terminalia-1.7.0.dmg` from [Releases](https://github.com/agustinalonsocantoli/terminalia/releases/latest) or from [terminalia.dev](https://terminalia.dev/en/download).
+1. Download `Terminalia-1.8.0.dmg` from [Releases](https://github.com/agustinalonsocantoli/terminalia/releases/latest) or from [terminalia.dev](https://terminalia.dev/en/download).
 2. Open the DMG and drag Terminalia to Applications.
 3. The first time, macOS will block it because the app is not notarized by Apple yet. Go to **System Settings › Privacy & Security** and click **Open Anyway**. You only need to do this once.
 
 Verify the download (optional):
 
 ```sh
-shasum -a 256 ~/Downloads/Terminalia-1.7.0.dmg
+shasum -a 256 ~/Downloads/Terminalia-1.8.0.dmg
 # 2f7f60cbf901dcb2440f834e650b861affc6e894ed8f7bce6b4bcddd4456a168
 ```
 

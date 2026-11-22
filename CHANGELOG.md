@@ -2,6 +2,19 @@
 
 Full release notes: [terminalia.dev/en/changelog](https://terminalia.dev/en/changelog)
 
+## 1.8.0 · 2026-11-22
+
+Premium monitoring: real-time server metrics, 7-day history and alerts.
+
+### Monitor (Premium)
+- **Monitor tab in Processes:** CPU, memory, load, network and per-partition usage of Linux and macOS servers, read every 5 seconds over the same SSH connection. Nothing is installed on the server (`/proc` and `df` on Linux; `top`, `vm_stat` and `netstat` on macOS).
+- **Charts** for the last hour, 24 hours and 7 days. The history (one average per minute, metrics only) is stored on your Mac and deleted after 7 days.
+- **Alerts:** CPU, memory and disk thresholds (90% by default) in Settings. Servers over a threshold are flagged in the tab and in the menu bar, which also shows the figures of every connected server.
+
+### License
+- **Settings › License:** activate Premium with your code. Activation needs a connection once and is tied to this Mac; after that it's checked every 7 days and keeps working for up to 30 days offline.
+- Premium will be paid soon; for now the license is free on request at [terminalia.dev/premium](https://terminalia.dev/en/premium). Everything free stays free.
+
 ## 1.7.0 · 2026-11-14
 
 Cron with a UI: jobs in plain language, a visual editor and changes reviewed before applying.
